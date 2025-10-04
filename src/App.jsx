@@ -22,11 +22,11 @@ const Portfolio = () => {
   const experienceRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
-
   const titles = [
     'Full-Stack Developer',
     'Software Developer',
     'Machine Learning Enthusiast',
+    'AI-Engineer',
   ];
 
   // Mouse tracking for interactive effects
@@ -210,40 +210,52 @@ const Portfolio = () => {
 
   const projects = [
     {
-      title: "Agro Craft",
-      description: "Full-stack farmer-to-consumer marketplace with secure authentication, product listings, and order management. Built with responsive design and analytics dashboard.",
-      tech: ["React.js", "Node.js", "SQL", "JavaScript"],
-      features: ["Secure Authentication", "Responsive Design", "REST APIs", "Analytics Dashboard"],
+      title: "MedAI Multi-Modal Diagnostic Assistant",
+      description: "Multi-modal diagnostic system analyzing medical images (X-rays, MRIs, CT scans) and clinical text simultaneously, achieving 75% diagnostic accuracy with explainable insights for healthcare professionals.",
+      tech: ["TensorFlow", "PyTorch", "Streamlit", "NLP", "Computer Vision"],
+      features: ["Medical Image Analysis", "Clinical Text Processing", "Explainable AI", "Interactive Dashboard"],
       icon: <Sparkles className="w-8 h-8" />,
-      gradient: "from-green-400 to-blue-500"
+      gradient: "from-blue-400 to-purple-500",
+      link: "https://medic-multi-model.streamlit.app/"
     },
     {
-      title: "AI-Powered Post Office Modernization",
-      description: "CNN-based model for optimizing delivery routes and parcel sorting. Includes CI/CD pipeline and monitoring dashboards for performance tracking.",
-      tech: ["Python", "CNN", "DevOps", "CI/CD"],
-      features: ["Route Optimization", "Parcel Sorting", "Performance Monitoring", "Automated Pipeline"],
+      title: "AI-Resume Scorer",
+      description: "Intelligent resume evaluation system processing applications in seconds with 90% improved screening accuracy, using NLP-based extraction for skills, experience, and education analysis.",
+      tech: ["Python", "NLP", "spaCy", "pandas", "NumPy", "Streamlit"],
+      features: ["NLP Extraction", "Weighted Scoring", "Data-driven Ranking", "70% Time Reduction"],
       icon: <Zap className="w-8 h-8" />,
-      gradient: "from-purple-400 to-pink-500"
+      gradient: "from-green-400 to-teal-500",
+      link: "https://ai-resumescorer.streamlit.app/"
     },
     {
-      title: "Sales Forecasting Platform",
-      description: "Time series analysis platform for predicting weekly sales trends. Features interactive charts and comprehensive KPI dashboards.",
-      tech: ["Python", "ML", "Data Visualization"],
-      features: ["Trend Analysis", "Anomaly Detection", "Interactive Charts", "KPI Dashboard"],
+      title: "WellnessWay – Agentic Health Discovery",
+      description: "Intelligent wellness discovery platform leveraging Foursquare Places API and AI agents to recommend parks, yoga studios, organic stores through natural language queries with 80% faster response time.",
+      tech: ["React.js", "Redux.js", "REST APIs", "AI Agents"],
+      features: ["AI-Powered Search", "Location-based Recommendations", "Redux State Management", "Natural Language Queries"],
       icon: <Target className="w-8 h-8" />,
-      gradient: "from-orange-400 to-red-500"
+      gradient: "from-purple-400 to-pink-500",
+      link: "https://wellnesssite-final.vercel.app/"
+    },
+    {
+      title: "Portfolio Website",
+      description: "Responsive personal portfolio showcasing projects, skills, and professional experience with modern UI/UX principles, seamless navigation, and optimized performance across all devices.",
+      tech: ["React.js", "TypeScript", "Tailwind CSS", "PHP", "HTML5"],
+      features: ["Type Safety", "Utility-first Styling", "Responsive Design", "Clean Architecture"],
+      icon: <Code className="w-8 h-8" />,
+      gradient: "from-orange-400 to-red-500",
+      link: "https://esvanthresume.vercel.app/"
     }
   ];
-
   const achievements = [
     {
       title: "Best Idea Award – MODA Taiwan",
       description: "NT$10,000 prize for AI-and-drone agriculture concept",
       icon: <Award className="w-8 h-8 text-yellow-400" />,
-      glow: "shadow-yellow-400/30"
+      glow: "shadow-yellow-400/30",
+      Image: "moda_taiwan_award.png"
     },
     {
-      title: "3rd Place – Infosurice Hackathon",
+      title: "3rd Place – Infocruise Hackathon",
       description: "Innovative prototype coding at Kongu Engineering College",
       icon: <Award className="w-8 h-8 text-orange-400" />,
       glow: "shadow-orange-400/30"
@@ -328,8 +340,8 @@ const Portfolio = () => {
                   key={item}
                   onClick={() => scrollTo(item)}
                   className={`block w-full text-left capitalize py-3 px-4 rounded-lg transition-all font-medium ${activeSection === item
-                      ? 'text-cyan-400'
-                      : 'text-gray-300 hover:text-cyan-400'
+                    ? 'text-cyan-400'
+                    : 'text-gray-300 hover:text-cyan-400'
                     }`}
                   style={{
                     backgroundColor: activeSection === item ? '#374151' : '#1f2937',
@@ -453,6 +465,7 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
+
       {/* Experience Section */}
       <section ref={experienceRef} id="experience" className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-800/30 backdrop-blur-sm relative z-10">
         <div className="max-w-7xl mx-auto">
@@ -476,7 +489,7 @@ const Portfolio = () => {
                 <div className="bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-cyan-400/50 hover:scale-105 transform transition-all hover:shadow-xl hover:shadow-cyan-500/20 relative ml-8 sm:ml-12">
                   <div className="absolute -left-10 sm:-left-14 top-6 sm:top-8 w-3 h-3 sm:w-4 sm:h-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full border-4 border-gray-900"></div>
                   <h4 className="text-xl sm:text-2xl font-bold text-white mb-3">Front-End Developer</h4>
-                  <p className="text-cyan-400 mb-4 font-semibold text-base sm:text-lg">Sybeez • Jul 2025 – Present</p>
+                  <p className="text-cyan-400 mb-4 font-semibold text-base sm:text-lg">Sybeez Technology Private Limited • Jul 2025 – Present</p>
                   <p className="text-gray-300 leading-relaxed text-sm sm:text-base">Developing cutting-edge front-end solutions for ERP, Finance, and HRM modules using React.js and modern web technologies.</p>
                 </div>
                 <div className="bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-purple-400/50 hover:scale-105 transform transition-all hover:shadow-xl hover:shadow-purple-500/20 relative ml-8 sm:ml-12">
@@ -500,18 +513,43 @@ const Portfolio = () => {
                 {achievements.map((achievement, index) => (
                   <div
                     key={index}
-                    className={`bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 sm:p-8 flex items-start space-x-4 sm:space-x-6 border border-white/10 hover:border-white/20 hover:scale-105 transform transition-all duration-700 hover:shadow-xl ${achievement.glow} ${visibleSections.has('experience')
+                    className={`bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-white/20 hover:scale-105 transform transition-all duration-700 hover:shadow-xl ${achievement.glow} ${visibleSections.has('experience')
                       ? 'opacity-100 translate-y-0'
                       : 'opacity-0 translate-y-20'
                       }`}
                     style={{ transitionDelay: `${500 + index * 150}ms` }}
                   >
-                    <div className="flex-shrink-0">
-                      {achievement.icon}
-                    </div>
-                    <div>
-                      <h4 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">{achievement.title}</h4>
-                      <p className="text-gray-300 leading-relaxed text-sm sm:text-base">{achievement.description}</p>
+                    <div className="flex items-start space-x-4 sm:space-x-6">
+                      <div className="flex-shrink-0">
+                        {achievement.icon}
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">{achievement.title}</h4>
+                        <p className="text-gray-300 leading-relaxed text-sm sm:text-base mb-4">{achievement.description}</p>
+
+                        {/* MODA Taiwan Award Image - Auto animate in and out */}
+                        {index === 0 && achievement.Image && (
+                          <div className="mt-4">
+                            <img
+                              src={`/${achievement.Image}`}
+                              alt="MODA Taiwan Award"
+                              className="w-full h-auto max-w-xs mx-auto object-cover rounded-lg border border-white/20 animate-pulse hover:animate-none hover:scale-105 transition-transform duration-500 cursor-pointer"
+                              loading="lazy"
+                              onClick={() => {
+                                // Optional: Add click to enlarge functionality
+                                const img = new Image();
+                                img.src = `/${achievement.Image}`;
+                                img.className = 'fixed inset-0 m-auto max-w-90vw max-h-90vh z-50 cursor-zoom-out';
+                                img.onclick = () => document.body.removeChild(img);
+                                document.body.appendChild(img);
+                              }}
+                            />
+                            <div className="text-center mt-2 text-xs text-cyan-400 animate-pulse">
+                              Idea Award from Government of Taiwan MODA
+                            </div>
+                          </div>
+                        )}
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -531,9 +569,12 @@ const Portfolio = () => {
           </h2>
           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
             {projects.map((project, index) => (
-              <div
+              <a
                 key={index}
-                className={`group bg-gray-800/50 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/10 hover:border-white/20 hover:bg-gray-800/70 hover:scale-105 transform transition-all duration-700 hover:shadow-xl hover:shadow-blue-500/20 ${visibleSections.has('projects')
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`group bg-gray-800/50 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/10 hover:border-white/20 hover:bg-gray-800/70 hover:scale-105 transform transition-all duration-700 hover:shadow-xl hover:shadow-blue-500/20 block ${visibleSections.has('projects')
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-20'
                   }`}
@@ -574,13 +615,18 @@ const Portfolio = () => {
                       ))}
                     </ul>
                   </div>
+
+                  {/* External Link Indicator */}
+                  <div className="flex items-center justify-end mt-6 pt-6 border-t border-white/10">
+                    <span className="text-cyan-400 text-sm font-medium mr-2">View Project</span>
+                    <ExternalLink className="w-4 h-4 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                  </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
       </section>
-
       {/* Contact Section with working Formspree integration */}
       <section ref={contactRef} id="contact" className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-800/30 backdrop-blur-sm relative z-10">
         <div className="max-w-7xl mx-auto">
