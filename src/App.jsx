@@ -322,7 +322,7 @@ const Portfolio = () => {
             ))}
           </div>
           <button
-            className="md:hidden hover:scale-110 transition-transform p-2 text-gray-900"
+            className="md:hidden hover:scale-110 transition-transform p-2 text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={isMenuOpen}
